@@ -19,7 +19,7 @@ import java.util.List;
  POST, PUT, and DELETE, and it simplifies development by automatically managing response serialization based on 
  the client's Accept header.
  */
-@RestController
+@RestController //RESTful API controller
 
 /*
  The @RequestMapping annotation in Spring is a core component used to map incoming web requests to specific 

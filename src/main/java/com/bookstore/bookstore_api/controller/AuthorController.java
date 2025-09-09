@@ -95,4 +95,67 @@ public class AuthorController {
     public void deleteAuthor(@PathVariable Long id) {
         authorService.deleteAuthor(id);
     }
+
+    /*
+     * Application programming Interface [API] :
+     * 
+     * An API (Application Programming Interface) is like a menu in a restaurant.
+
+You (the customer) don’t go into the kitchen to cook your food.
+Instead, you look at the menu, choose what you want, and place your order.
+The waiter takes your order to the kitchen, and the kitchen prepares and sends back your food.
+In this analogy:
+
+You = The frontend (like a website or mobile app)
+The menu = The API
+The kitchen = The backend (server, database, etc.)
+The waiter = The API handling the request and response
+So, an API is a set of rules and tools that lets different software applications talk to each other. It defines how you can ask for data (like "get user info") and how the system will respond (like sending back user details).
+
+In Spring Boot, the controller layer acts as this API — it receives requests (like from a website or app), processes them, and returns the right data.
+
+
+
+
+what do you mean by set of rules. i have understood that the api servs as per the request but you also say that api is a set of rules. what do you mean by that ?
+Great question! When we say an API is a "set of rules", we mean it defines how two pieces of software should communicate with each other — like a contract or a guidebook.
+
+Let’s break it down simply:
+
+Think of an API like a phone number and instruction manual for a service.
+Imagine you want to call a pizza shop to order food. But you can’t just call any number and shout "I want pizza!" — you need to:
+
+Call the correct number (e.g., the pizza shop’s hotline)
+Speak at the right time (after they answer)
+Say things in a way they understand (e.g., "I want a large pepperoni pizza")
+Give your address and payment info if asked
+If you don’t follow these steps, they won’t know what you want — or they might not help you at all.
+
+An API works the same way. It defines:
+
+Rule	Example in API
+What URL to use	https://api.example.com/users
+What method to use	GET (to read), POST (to create), etc.
+What data to send	{ "name": "John", "email": "john@example.com" }
+How to send it	In JSON format, in the request body
+What you’ll get back	A success message or user data in JSON
+How errors are shown	{ "error": "User not found" } with status 404
+👉 So, the "set of rules" means:
+
+The client (like a frontend app) must ask correctly.
+The server (your Spring Boot app) knows how to respond.
+Both sides agree on the format and behavior.
+In Spring Boot:
+When you write:
+
+@GetMapping("/users")
+public List<User> getUsers() { ... }
+
+You’re defining a rule:
+👉 "If someone sends a GET request to /users, return a list of users in JSON."
+
+That’s part of your API’s rulebook.
+
+✅ So, an API isn’t just a messenger — it’s a clear agreement on how to request and receive data. That’s why we call it a set of rules.
+     */
 }
